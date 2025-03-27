@@ -1,0 +1,118 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png'), #000 !important;
+    color: #ffffff !important;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7) !important;
+    padding: 20px !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+
+main.container {
+    padding: 20px !important;
+}
+
+button, .btn {
+    padding: 10px 15px !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border: 1px solid #ffffff !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s !important;
+}
+
+button:hover, .btn:hover {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.image-gallery {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    margin-top: 20px !important;
+}
+
+.image-gallery img {
+    width: 150px !important;
+    height: auto !important;
+    border: 2px solid white !important;
+    border-radius: 10px !important;
+}
+
+footer {
+    padding: 10px !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    width: 100% !important;
+    bottom: 0 !important;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f8d210 !important; 
+}
+
+.planet-gallery {
+    display: flex !important; 
+    flex-wrap: wrap !important; 
+    justify-content: center !important; 
+    align-items: center !important; 
+    gap: 30px !important; 
+    margin-top: 50px !important; 
+}
+
+.planet-gallery img {
+    width: 250px !important; 
+    height: auto !important; 
+    transition: transform 0.3s !important; 
+}
+
+.planet-gallery img:hover {
+    transform: scale(1.1) !important; 
+}
+
+.virsraksts {
+    display: inline-block;
+    transition: transform 0.3s ease-out; 
+}
+
+.virsraksts:hover {
+    transform: scale(1.1); 
+}
+
+    </style>
+
+<h1 class = "virsraksts" style="font-family: Arial; font-weight: bold;">PLANETS OF OUR SOLAR SYSTEM</h1>
+
+<div class="planet-gallery">
+        <a href="/sun"><img src="static/sun-removebg-preview.png" alt="Sun"></a>
+    <a href="/mercury"><img src="static/mercury.png" alt="Mercury"></a>
+    <a href="/venus"><img src="static/venus.png" alt="Venus"></a>
+    <a href="/mars"><img src="static/mars-removebg-preview.png" alt="Mars"></a>
+    <a href="/jupiter"><img src="static/jupiter.png" alt="Jupiter"></a>
+    <a href="/saturn"><img src="static/saturn.png" alt="Saturn"></a>
+    <a href="/uranus"><img src="static/uranus.png" alt="Uranus"></a>
+    <a href="/neptune"><img src="static/neptune.png" alt="Neptune"></a>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 </p>
+</footer>
+
+{% endblock %}
+

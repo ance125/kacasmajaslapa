@@ -1,0 +1,66 @@
+{% extends "home.html" %} {% block title %}Jupiter{% endblock %} {% block content
+    %}
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://www.transparenttextures.com/patterns/stardust.png'), #000 !important;
+        color: #ffffff !important;
+        text-align: center;
+    }
+    img {
+        width: 100%;
+        max-width: 500px;
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+    </style>
+
+    <h1>Jupiter</h1>
+
+    <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System. 
+    It is a gas giant with a mass more than 2.5 times that of all the other planets in the Solar System combined and slightly less than one-thousandth the mass of the Sun. 
+    Its diameter is eleven times that of Earth and a tenth that of the Sun. 
+    Jupiter orbits the Sun at a distance of 5.20 AU (778.5 Gm), with an orbital period of 11.86 years. 
+    It is the third-brightest natural object in the Earth's night sky, after the Moon and Venus, and has been observed since prehistoric times. 
+    Its name derives from that of Jupiter, the chief deity of ancient Roman religion.</p>
+
+    <div>
+        <h3>Distance to the sun</h3>
+        <p>475,140,027 km</p>
+    </div>
+
+    <div>
+        <h3>One way light time to the sun</h3>
+        <p>42.510763 mins</p>
+    </div>
+
+    <img src="static/jupi.png" alt="jupiter">
+
+    <p>Jupiter has 95 known natural satellites, and it is likely that this number would go up due to improved instrumentation.
+    Of these, 79 are less than 10 km in diameter.
+    The four largest moons, known as the Galilean moons, are Ganymede, Callisto, Io, and Europa (in order of decreasing size), and are visible from Earth with binoculars on a clear night.</p>
+
+    <script>
+        function refreshChart() {
+        document.getElementById('histogram').src = "/jupiter_histogram?" + new Date().getTime();
+        }
+    </script>
+
+    <body>
+        <div class="container text-center mt-5">
+            <h1 class="mb-4">Jupiter Moon Diameters</h1>
+            <div class="d-flex justify-content-center">
+                <img id="histogram" src="{{ url_for('jupiter_histogram') }}" alt="Jupiter Moon Histogram" class="img-fluid border border-light rounded-3">
+            </div>
+            <button class="btn btn-warning mt-4" onclick="refreshChart()">Refresh Chart</button>
+        </div>
+    </body>
+
+    <footer>
+        <p>&copy; 2025 </p>
+    </footer>
+ 
+{% endblock %}
+ 

@@ -1,0 +1,40 @@
+{% extends "home.html" %} {% block title %}Mars{% endblock %} {% block content
+    %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png'), #000 !important;
+            color: #ffffff !important;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            max-width: 500px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+    </style>
+
+    <h1>Mars</h1>
+
+    <p>
+        Mars is the fourth planet from the Sun. 
+        The surface of Mars is orange-red because it is covered in iron(III) oxide dust, giving it the nickname "the Red Planet".
+        Mars is among the brightest objects in Earth's sky, and its high-contrast albedo features have made it a common subject for telescope viewing. 
+        It is classified as a terrestrial planet and is the second smallest of the Solar System's planets with a diameter of 6,779 km (4,212 mi). 
+        In terms of orbital motion, a Martian solar day (sol) is equal to 24.6 hours, and a Martian solar year is equal to 1.88 Earth years (687 Earth days). 
+        Mars has two natural satellites that are small and irregular in shape: Phobos and Deimos.
+    </p>
+
+    <img src="static/marsins.png" alt="mars">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Weather Temperature Trends</h1>
+    <img src="{{ url_for('weather_chart') }}" alt="Weather Line Chart">
+
+    <footer>
+        <p>&copy; 2025 </p>
+    </footer>
+    {% endblock %}
